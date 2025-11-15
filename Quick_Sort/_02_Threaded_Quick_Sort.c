@@ -95,7 +95,7 @@ struct args *arg = (struct args *)arg_t ;
 			}else{
 				Threaded_Quick_Sort(thread_to_left) ;
 			}		
-			if(active_thread < MAX_THREAD && (thread_to_right->right-thread_to_right->left > 3500)){
+			if(active_thread < MAX_THREAD && (thread_to_right->right-thread_to_right->left > 35000)){
 				pthread_create(&right_thread, NULL, Threaded_Quick_Sort, thread_to_right) ;
 				create_right=1 ;
 				active_thread++ ;
